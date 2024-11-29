@@ -13,7 +13,9 @@ struct ContentView: View {
         NavigationStack {
           Button("Show Modal"){
             isPresented.toggle()
-          }.sheet(isPresented: $isPresented) {
+          }
+          .foregroundStyle(.red)
+          .sheet(isPresented: $isPresented) {
             ModalView()
           }
           .navigationTitle("Reminders")
