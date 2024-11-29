@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-  @State private var isPresented: Bool = false
-    var body: some View {
-        NavigationStack {
-          Button("Show Modal"){
-            isPresented.toggle()
-          }
-          .foregroundStyle(.red)
-          .sheet(isPresented: $isPresented) {
-            ModalView()
-          }
-          .navigationTitle("Reminders")
-        }
-        .padding()
+  var body: some View {
+    NavigationStack {
+      NavigationLink {
+        ModalView()
+      } label: {
+        Text("Go Next")
+      }
     }
+    .navigationTitle("Reminders")
+  }
 }
 
+
 #Preview {
-    ContentView()
+  ContentView()
 }
