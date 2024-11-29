@@ -10,11 +10,14 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     NavigationStack {
-      NavigationLink {
-        ModalView()
-      } label: {
-        Text("Go Next")
-      }.foregroundStyle(.purple)
+      VStack {
+        Text("This is the ContentView:")
+        NavigationLink {
+          ModalView()
+        } label: {
+          Text("Go Next")
+        }.foregroundStyle(.purple)
+      }
     }
     .navigationTitle("Reminders")
   }
