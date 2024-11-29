@@ -16,7 +16,7 @@ struct ContentView: View {
           ModalView()
         } label: {
           Text("Go Next")
-        }.foregroundStyle(.purple)
+        }.foregroundStyle(.yellow)
       }
     }
     .navigationTitle("Reminders")
